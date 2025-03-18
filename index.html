@@ -50,7 +50,7 @@
         }
 
         #events {
-            box-shadow: 0 0 10px 4px #3b3b3b;
+            box-shadow: 0 0 10px 4px #ddd;
             /* background-image: url(background1.png); */
             background-size: contain;
             filter: brightness(0.9);
@@ -72,7 +72,7 @@
 
         .job-card {
             border: none;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
@@ -97,6 +97,11 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+        #CV-link {
+            color: inherit;
+            text-decoration: inherit;
+        }
     </style>
 </head>
 
@@ -105,49 +110,46 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-9 m-0 p-0">
-                <header class="pt-4 text-center">
+                <header class="pt-4 text-center mb-5">
                     <h1 class="display-4 pb-0 mb-0">Portfolio <b>Paweł Supa</b></h1>
-                    <p class="lead mb-5 pb-5">Specjalizacja: Elektrotechnika i automatyka przemysłowa</p>
+                    <p class="lead">Specjalizacja: Elektrotechnika i automatyka przemysłowa</p>
                     <span class="mt-5 pt-5">Telefon: +48 739 9100 137</span></br>
                     <span>E-mail: pawel.supa2@gmail.com</span>
                 </header>
 
-                <div class="row mt-4">
+                <div class="row mt-4 mx-5">
 
                     <!-- Sekcja 2: Galeria zdjęć -->
-                    <div class="col-5">
+                    <div class="col-4">
                         <section id="gallery">
                             <h2>GALERIA</h2>
-                            <div class="row row-cols-3 g-2 gallery">
-                                <div><img src="Portfolio/lazik 1.jpg" class="img-fluid rounded" alt="Projekt 1"
-                                        onclick="openModal(this.src)"></div>
-                                <div class="row g-2">
-                                    <div><img src="Portfolio/ss.png" class="img-fluid rounded" alt="Projekt 2"
-                                            onclick="openModal(this.src)"></div>
-                                    <div><img src="Portfolio/lazik.jpg" class="img-fluid rounded" alt="Projekt 3"
-                                            onclick="openModal(this.src)"></div>
-                                </div>
-                                <div><img src="Portfolio/giif.gif" class="img-fluid rounded" alt="Projekt 4"
-                                        onclick="openModal(this.src)"></div>
-                                <div><img src="Portfolio/lazik 1.jpg" class="img-fluid rounded" alt="Projekt 5"
-                                        onclick="openModal(this.src)"></div>
-                                <div class="row g-2">
-                                    <div><img src="Portfolio/ss.png" class="img-fluid rounded" alt="Projekt 6"
-                                            onclick="openModal(this.src)"></div>
-                                    <div><img src="lazik.jpg" class="img-fluid rounded" alt="Projekt 7"
-                                            onclick="openModal(this.src)"></div>
-                                </div>
-                                <div><img src="Portfolio/giif.gif" class="img-fluid rounded" alt="Projekt 4"
-                                        onclick="openModal(this.src)"></div>
+                            <div class="row row-cols-2 g-2 gallery">
+                                <img src="Portfolio/ss.png" class="img rounded" alt="Projekt 2"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/lazik.jpg" class="img rounded" alt="Projekt 3"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/giif.gif" class="img rounded" alt="Projekt 4"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/4d881b72-7485-4bbe-bcf3-4aaaf751f88a.jpg" class="img rounded"
+                                    alt="Projekt 1" onclick="openModal(this.src)">
+                                <img src="Portfolio/wydarzenie_fupla.jpg" class="img rounded" alt="Projekt 2"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/lazik.jpg" class="img rounded" alt="Projekt 3"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/ss.png" class="img rounded" alt="Projekt 2"
+                                    onclick="openModal(this.src)">
+                                <img src="Portfolio/lazik.jpg" class="img rounded" alt="Projekt 3"
+                                    onclick="openModal(this.src)">
+                            </div>
                         </section>
                     </div>
 
                     <!-- Sekcja 1: Opis -->
-                    <div class="col-7">
+                    <div class="col-8">
                         <section id="description" class="mb-4 me-3">
                             <h2>O MNIE</h2>
-                            <p>Jestem pasjonatem elektrotechniki i automatyki przemysłowej, a moje serce bije w rytmie
-                                nowoczesnych technologii. Studiuję Elektronikę i Automatykę Przemysłową na Politechnice
+                            <p>Jestem pasjonatem elektrotechniki i automatyki przemysłowej. Studiuję Elektronikę i
+                                Automatykę Przemysłową na Politechnice
                                 Świętokrzyskiej, gdzie rozwijam swoje umiejętności i realizuję innowacyjne projekty.
                                 Jestem aktywnym członkiem koła naukowego Fupla oraz zasiadam w komisji programowej
                                 mojego kierunku, wspierając rozwój edukacji technicznej.</p>
@@ -164,10 +166,12 @@
                                     Projektowania – ECDL CAD</strong>, potwierdzający moje kompetencje w zakresie
                                 projektowania technicznego.</p>
 
-                            <div id="CV" class="mt-3">
+                            <div id="CV" class="mt-5">
                                 <h2>Poznaj mnie lepiej!</h2>
-                                <span>Pobierz moje CV</span></br>
-                                <a href="https://github.com/PawelSupa/portfolio/blob/27c072345ed9ebfdab1740c9dbaf9ea35cdce7ce/Portfolio/Pawel-Supa-cv-2025.pdf" class="button btn btn-dark p-1">Otwórz w nowej karcie</a>
+                                <span class="ms-1 me-2">Zobacz moje CV:</span>
+                                <button type="button" class="btn btn-dark p-1"><a id="CV-link"
+                                        href="https://github.com/PawelSupa/portfolio/blob/27c072345ed9ebfdab1740c9dbaf9ea35cdce7ce/Portfolio/Pawel-Supa-cv-2025.pdf">Otwórz
+                                        CV</a></button>
                             </div>
                         </section>
                     </div>
@@ -176,7 +180,7 @@
 
             <!-- Sidebar: Wydarzenia z interakcją -->
             <section id="events" class="col-lg-3 col-md-4 sidebar">
-                <h2>Tu się udzielam:</h2>
+                <h2 class="mt-3">Tu się udzielam:</h2>
 
                 <div class="job-card p-3 my-4">
                     <div class="d-flex align-items-center mb-2">
