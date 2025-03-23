@@ -12,18 +12,11 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            /* background-image: url(background1.png); */
             background-size: contain;
-
         }
-
-        /* .container-fluid {
-
-        } */
 
         header {
             text-align: center;
-            /* background-image: url(background3.png); */
             background-repeat: no-repeat;
             background-position: 0% 0%;
             background-size: 100% 100%;
@@ -31,11 +24,6 @@
 
         .hidden {
             display: none;
-        }
-
-        .event {
-            cursor: pointer;
-            padding: 10px;
         }
 
         img {
@@ -51,7 +39,6 @@
 
         #events {
             box-shadow: 0 0 10px 4px #ddd;
-            /* background-image: url(background1.png); */
             background-size: contain;
             filter: brightness(0.9);
         }
@@ -91,36 +78,39 @@
             padding: 3px 8px;
         }
 
-        .company-logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
         #CV-link {
             color: inherit;
             text-decoration: inherit;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                position: relative;
+                height: auto;
+                border-right: none;
+                width: 100%;
+            }
+
+            .col-9 {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="row">
-            <div class="col-9 m-0 p-0">
+            <div class="col-lg-9 col-md-12 col-sm-12 m-0 p-0">
                 <header class="pt-4 text-center mb-5">
                     <h1 class="display-4 pb-0 mb-0">Portfolio <b>Paweł Supa</b></h1>
                     <p class="lead">Specjalizacja: Elektrotechnika i automatyka przemysłowa</p>
-                    <span class="mt-5 pt-5">Telefon: +48 739 9100 137</span></br>
+                    <span class="mt-5 pt-5">Telefon: +48 739 9100 137</span><br>
                     <span>E-mail: pawel.supa2@gmail.com</span>
                 </header>
 
                 <div class="row mt-4 mx-5">
-
-                    <!-- Sekcja 2: Galeria zdjęć -->
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <section id="gallery">
                             <h2>GALERIA</h2>
                             <div class="row row-cols-2 g-2 gallery">
@@ -134,25 +124,23 @@
                                     alt="Projekt 1" onclick="openModal(this.src)">
                                 <img src="Portfolio/wydarzenie_fupla.jpg" class="img rounded" alt="Projekt 2"
                                     onclick="openModal(this.src)">
-                                <img src="Portfolio/lazik.jpg" class="img rounded" alt="Projekt 3"
+                                <img src="Portfolio/solid1.jpg" class="img rounded" alt="Projekt 3"
                                     onclick="openModal(this.src)">
-                                <img src="Portfolio/ss.png" class="img rounded" alt="Projekt 2"
+                                <img src="Portfolio/solid2.jpg" class="img rounded" alt="Projekt 2"
                                     onclick="openModal(this.src)">
-                                <img src="Portfolio/lazik.jpg" class="img rounded" alt="Projekt 3"
+                                <img src="Portfolio/solid3.jpg" class="img rounded" alt="Projekt 3"
                                     onclick="openModal(this.src)">
                             </div>
                         </section>
                     </div>
 
-                    <!-- Sekcja 1: Opis -->
-                    <div class="col-8">
+                    <div class="col-md-8">
                         <section id="description" class="mb-4 me-3">
                             <h2>O MNIE</h2>
-                            <p>Jestem pasjonatem elektrotechniki i automatyki przemysłowej. Studiuję Elektronikę i
-                                Automatykę Przemysłową na Politechnice
-                                Świętokrzyskiej, gdzie rozwijam swoje umiejętności i realizuję innowacyjne projekty.
+                            <p>Studiuję Elektronikę i Automatykę Przemysłową na Politechnice
+                                Świętokrzyskiej, gdzie na codzień rozwijam swoje umiejętności i realizuję innowacyjne projekty.
                                 Jestem aktywnym członkiem koła naukowego Fupla oraz zasiadam w komisji programowej
-                                mojego kierunku, wspierając rozwój edukacji technicznej.</p>
+                                mojego kierunku, wspierając rozwój edukacji technicznej. Ponadto w przy wielu okazjach miałem okazję reprezentować Politechnikę na targach nauki oraz w szkołach na prezentaci uczelni.</p>
                             <p>Posiadam praktyczne doświadczenie w montażu i okablowaniu szaf elektrycznych zgodnie ze
                                 schematami technicznymi oraz planami elektrycznymi. Tworzę dokumentacje jakościowe, a
                                 także zajmuję się instalacją i podłączaniem urządzeń elektrycznych oraz komponentów
@@ -165,39 +153,14 @@
                             <p>Posiadam również <strong>Europejski Certyfikat Umiejętności Komputerowego Wspomagania
                                     Projektowania – ECDL CAD</strong>, potwierdzający moje kompetencje w zakresie
                                 projektowania technicznego.</p>
-
-                            <div id="CV" class="mt-5">
-                                <h2>Poznaj mnie lepiej!</h2>
-                                <span class="ms-1 me-2">Zobacz moje CV:</span>
-                                <button type="button" class="btn btn-dark p-1"><a id="CV-link"
-                                        href="https://github.com/PawelSupa/portfolio/blob/27c072345ed9ebfdab1740c9dbaf9ea35cdce7ce/Portfolio/Pawel-Supa-cv-2025.pdf">Otwórz
-                                        CV</a></button>
-                            </div>
                         </section>
                     </div>
                 </div>
             </div>
 
-            <!-- Sidebar: Wydarzenia z interakcją -->
-            <section id="events" class="col-lg-3 col-md-4 sidebar">
+            <section id="events" class="col-lg-3 col-md-12 sidebar">
                 <h2 class="mt-3">Tu się udzielam:</h2>
-
-                <div class="job-card p-3 my-4">
-                    <div class="d-flex align-items-center mb-2">
-                        <div>
-                            <h6 class="mb-0">Politechnika Świętokrzyska dzieciom</h6>
-                            <small class="text-muted">3 czerwca 2024 r</small>
-                        </div>
-                        <span class="ms-auto category-badge">Festiwal</span>
-                    </div>
-                    <small class="text-muted">Festiwal Nauki i Techniki dla najmłodszych, zorganizowany przez i pod
-                        patronatem Dziecięcej Politechniki Świętokrzyskiej</small><br>
-                    <span>Link do wydarzenia: <a
-                            href="https://tu.kielce.pl/politechnika-swietokrzyska-dzieciom-swiat-mlodego-odkrywcy-2024-juz-niebawem/">tu.kielce.pl</a>
-                    </span>
-                </div>
-
-                <div class="job-card p-3 my-4">
+                 <div class="job-card p-3 my-4">
                     <div class="d-flex align-items-center mb-2">
                         <div>
                             <h6 class="mb-0">Koło naukowe FUPLA</h6>
@@ -229,32 +192,63 @@
                 <div class="job-card p-3 my-4">
                     <div class="d-flex align-items-center mb-2">
                         <div>
-                            <h6 class="mb-0">ĆOŚ TU TRZA WYMYŚLIĆ</h6>
-                            <small class="text-muted">Od 2024 r</small>
+                            <h6 class="mb-0">Targi naukowe</h6>
+                            <small class="text-muted">19 marca 2025 r</small>
                         </div>
-                        <span class="ms-auto category-badge">Samorząd</span>
+                        <span class="ms-auto category-badge">Targi</span>
                     </div>
-                    <small class="text-muted">Spotkania w celu zebrania opinii i wniosków
-                        dotyczących procesu dydaktycznego </small><br>
-                    <span>Link do strony koła: <a href="https://fupla.tu.kielce.pl/">fupla.tu.kielce.pl</a>
+                    <small class="text-muted">Wydarzenie skierowane do młodzieży stojącej przed wyborem dalszej ścieżki edukacyjnej, które ma na celu zaprezentowanie uczelni wyższych. </small><br>
+                    <span>Link do wydarzenia: <a href="https://targiedukacji.pl/starachowice-2/">targiedukacji.pl</a>
+                    </span>
+                </div>
+
+                <div class="job-card p-3 my-4">
+                    <div class="d-flex align-items-center mb-2">
+                        <div>
+                            <h6 class="mb-0">Dni otwarte Politechniki</h6>
+                            <small class="text-muted">18 kwietnia 2024 r</small>
+                        </div>
+                        <span class="ms-auto category-badge">Targi</span>
+                    </div>
+                    <small class="text-muted">Podczas wydarzenia zaprezentowana zostanie szeroka oferta edukacyjna PŚk oraz nowoczesne zaplecze naukowe i dydaktyczne. Będzie można zwiedzić kampus akademicki i wziąć udział w licznych wykładach otwartych i pokazach naukowych.</small><br>
+                    <span>Link do wydarzenia: <a href="https://uczelnie.info.pl/event/dzien-otwarty-politechniki-swietokrzyskiej/">uczelnie.info.pl</a>
+                    </span>
+                </div>
+                
+                <div class="job-card p-3 my-4">
+                    <div class="d-flex align-items-center mb-2">
+                        <div>
+                            <h6 class="mb-0">Politechnika Świętokrzyska dzieciom</h6>
+                            <small class="text-muted">3 czerwca 2024 r</small>
+                        </div>
+                        <span class="ms-auto category-badge">Festiwal</span>
+                    </div>
+                    <small class="text-muted">Festiwal Nauki i Techniki dla najmłodszych, zorganizowany przez i pod
+                        patronatem Dziecięcej Politechniki Świętokrzyskiej</small><br>
+                    <span>Link do wydarzenia: <a
+                            href="https://tu.kielce.pl/politechnika-swietokrzyska-dzieciom-swiat-mlodego-odkrywcy-2024-juz-niebawem/">tu.kielce.pl</a>
                     </span>
                 </div>
             </section>
-
         </div>
     </div>
-    <script>
-        function toggleDescription(id) {
-            const description = document.getElementById(id);
-            description.classList.toggle('hidden');
-        }
 
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="modalImage" class="w-100" src="" alt="Powiększone zdjęcie">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
         function openModal(src) {
             document.getElementById('modalImage').src = src;
             const modal = new bootstrap.Modal(document.getElementById('imageModal'));
             modal.show();
         }
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
